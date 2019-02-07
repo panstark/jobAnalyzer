@@ -1,0 +1,65 @@
+CREATE TABLE `job_day_count` (
+  `id` int auto_increment,
+  `job_name` varchar(100) DEFAULT NULL,
+  `job_addr` varchar(30) DEFAULT NULL,
+  `salary_year_avg_low` double(10,4) NOT NULL default 0,
+  `salary_year_avg_high` double(10,4) NOT NULL default 0,
+  `job_num` varchar(50) DEFAULT NULL,
+  `work_years_avg` varchar(50) DEFAULT NULL,
+  `publish_date` varchar(20) DEFAULT NULL,
+  `crawl_date` varchar(20) DEFAULT NULL,
+  `source` varchar(10) DEFAULT NULL,
+  `create_by` varchar(64),
+  `create_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_by` varchar(64),
+  `update_date`datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE= MyISAM DEFAULT CHARSET=UTF8MB4;
+
+drop table IF EXISTS job_company_salary;
+CREATE TABLE `job_day_count` (
+  `id` int auto_increment,
+  `company_name` varchar(100) DEFAULT NULL,
+  `job_addr` varchar(30) DEFAULT NULL,
+  `salary_year_avg_low` double(10,4) NOT NULL default 0,
+  `salary_year_avg_high` double(10,4) NOT NULL default 0,
+  `job_num` int DEFAULT NULL,
+  `work_years_avg` double(10,4) DEFAULT NULL,
+  `publish_date` varchar(20) DEFAULT NULL,
+  `crawl_date` varchar(20) DEFAULT NULL,
+  `source` varchar(10) DEFAULT NULL,
+  `create_by` varchar(64),
+  `create_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_by` varchar(64),
+  `update_date`datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE= MyISAM DEFAULT CHARSET=UTF8MB4;
+
+drop table IF EXISTS job_top_detail;
+CREATE TABLE `job_top_detail` (
+  `id` int auto_increment,
+  `job_name` varchar(100) DEFAULT NULL,
+  `job_url` varchar(100) DEFAULT NULL,
+  `job_addr` varchar(30) DEFAULT NULL,
+  `salary_year_low` double(10,4) NOT NULL default 0,
+  `salary_year_high` double(10,4) NOT NULL default 0,
+  `job_desc` varchar(2000) DEFAULT NULL,
+  `welfare` varchar(100) DEFAULT NULL,
+  `education` varchar(100) DEFAULT NULL,
+  `work_years` varchar(100) DEFAULT NULL,
+  `age` varchar(100) DEFAULT NULL,
+  `language` varchar(100) DEFAULT NULL,
+  `company_name` varchar(100) DEFAULT NULL,
+  `company_type` varchar(100) DEFAULT NULL,
+  `company_addr` varchar(100) DEFAULT NULL,
+  `company_size` varchar(100) DEFAULT NULL,
+  `company_desc` varchar(2000) DEFAULT NULL,
+  `publish_date` varchar(20) DEFAULT NULL,
+  `crawl_date` varchar(20) DEFAULT NULL,
+  `source` varchar(10) DEFAULT NULL,
+  `create_by` varchar(64),
+  `create_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_by` varchar(64),
+  `update_date`datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE= MyISAM DEFAULT CHARSET=UTF8MB4;
